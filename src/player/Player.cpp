@@ -418,7 +418,7 @@ namespace ia {
     void Player::startOtherPlayer(RoleEnum role)
     {
         std::string command;
-        if (role != RoleEnum::GATHERER) {
+        if (true) {
             command =
                 "./zappy_ai -p " + std::to_string(_parsing.getPort()) + " -n " +
                 _parsing.getTeamName() + " -h " + _parsing.getMachine()
