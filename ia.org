@@ -1,0 +1,81 @@
+#+STARTUP: latexpreview
+#+LANGUAGE: fr
+
+* Ressources
+
+Map en 30 × 30 donc :
+
+| food      | 450 |
+| linemate  | 270 |
+| deraumere | 135 |
+| sibur     |  90 |
+| mendiane  |  90 |
+| phiras    |  72 |
+| thystame  |  45 |
+
+Ressources dans une colonne :
+
+| food      |   15 |
+|-----------+------|
+| linemate  |    9 |
+| deraumere |  4.5 |
+| sibur     |    3 |
+| mendiane  |    3 |
+| phiras    |  2.4 |
+| thystame  |  1.5 |
+| total     | 23.4 |
+
+
+* Élevations
+
+| niveau | linemate | deraumere | sibur | mendiane | phiras | thystame |
+|--------+----------+-----------+-------+----------+--------+----------|
+|      1 |        1 |         0 |     0 |        0 |      0 |        0 |
+|      2 |        1 |         1 |     1 |        0 |      0 |        0 |
+|      3 |        2 |         0 |     1 |        0 |      2 |        0 |
+|      4 |        1 |         1 |     2 |        0 |      1 |        0 |
+|      5 |        1 |         2 |     1 |        3 |      1 |        0 |
+|      6 |        1 |         2 |     3 |        0 |      1 |        0 |
+|      7 |        2 |         2 |     2 |        2 |      2 |        1 |
+|--------+----------+-----------+-------+----------+--------+----------|
+|  Total |        9 |         8 |    10 |        5 |      7 |        1 |
+
+Il suffit de récolter quatre colonnes pour avoir assez de ressources
+pour toutes les incantations.
+
+* Temps pour vider une colonne
+
+Étapes :
+1. Look (7/f)
+2. Forward (7/f)
+3. Take object (7/f × quantité d’objets)
+
+On compte en moyenne 23.4 ressources à prendre par colonne, ce qui
+nous donne 583.8/f pour récupérer une colonne.
+\begin{equation}
+t = 30 \times 7 \times 2 + 7 \times 23.4 = 583.8
+\end{equation}
+
+* Temps des incantations
+
+Pour déposer les 23.4 ressources par joueur, il faut 23.4 × 7 = 163.8
+ticks.
+
+Ensuite, pour les huits incantations il faut 300 × 8 = 2400 ticks. Ce
+qui requiert d’avoir au moins vingt unités de nourriture.
+\begin{equation}
+\lceil 2400 / 126 \rceil = 20
+\end{equation}
+
+Une colonne ne contiens en moyenne que 15 unités de nourriture, et le
+joueur démarre avec 10 unités ; il faudra donc sûrement penser à avoir
+des ia en plus pour donner de la nouriture aux six incantateurs.
+
+* Temps total pour arriver au niveau huit
+
+Il nous faudra donc 2983.8 ticks pour arriver au niveau huit, ce qui
+correspond à trente secondes avec une fréquence de cent ticks par
+seconde.
+\begin{equation}
+t = 583.8 + 2400 = 2983.8
+\end{equation}
