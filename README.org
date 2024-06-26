@@ -1,0 +1,19 @@
+* Zappy « Sugon » AI
+This is an AI made as an EPITECH project to play the game /Zappy/.
+
+** Building
+This program depends on *libsodium* for encryption.
+
+To build and install the program you can use the following commands:
+#+begin_src sh
+  make
+  make install
+#+end_src
+
+** Encryption
+A private key is used for encrypting and decrypting broadcasts. To
+generate a new one you can use the script `scripts/genkey.c` and place
+the result in `src/Broadcaster.hpp`.
+
+** Authors
+This program was made by Noé LOPEZ and Maxence LUPION.
