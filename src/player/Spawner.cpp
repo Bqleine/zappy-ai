@@ -9,6 +9,7 @@
 #include "map/World_enums.hpp"
 #include <cstdlib>
 #include <iostream>
+#include <unistd.h>
 
 namespace ia {
     void Spawner::forkPlayers(Player &player, unsigned int amount)

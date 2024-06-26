@@ -20,7 +20,7 @@
 #include <cmath>
 #include <cstring>
 #include <iostream>
-#include <protocol_gui.h>
+#include <unistd.h>
 
 namespace ia {
     Player::Player(Position2i map_size, int socket, const Parsing &parsing, int nb_left,

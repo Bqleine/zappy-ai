@@ -6,6 +6,7 @@
 */
 
 #include "player/Repeater.hpp"
+#include <unistd.h>
 
 namespace ia {
     void Repeater::run(Player &player)
