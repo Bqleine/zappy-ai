@@ -1,5 +1,5 @@
 * Zappy « Sugon » AI
-This is an AI made as an EPITECH project to play the game /Zappy/.
+This is an AI made as an EPITECH project to play the game /Zappy/. It has won the 2024 tournament in EPITECH Lyon against the school year.
 
 ** Building
 This program depends on *libsodium* for encryption.
